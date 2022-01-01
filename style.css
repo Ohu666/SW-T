@@ -54,9 +54,9 @@
     margin-top: 175px;
 }
 .int-area {
-    width: 400px; position: relative;
+    width: 25%; position: relative;
     margin-top: 20px;
-    margin-left: 268px;
+    margin-left: 37%;
 }
 .int-area:first-child {
     margin-top: 0;
@@ -94,7 +94,7 @@
 }
 .btn-area {
     margin-top: 30px;
-    margin-left: 366px;
+    margin-left: 38%;
 }
 .btn-area button {
     width: 40%;
@@ -108,6 +108,7 @@
 .caption {
     margin-top: 30px;
     text-align: center;
+    margin-left: 20px;
 }
 .caption a {
     font-size: 15px;
@@ -117,6 +118,7 @@
 .btns-area {
     text-align: center;
     margin-top: 20px;
+    margin-left: 20px;
 }
 .btns-area a {
     font-size: 15px;
