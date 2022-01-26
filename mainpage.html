@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="mainpage.css">
+    <title>MAINPAGE</title>
+</head>
+<style>
+    input[id="menuicon"] {
+        display: none;
+    }
+    input[id="menuicon"] + label {
+        display: block;
+        width: 40px;
+        height: 30px;
+        position: fixed;
+        right: 5%;
+        top: 5%;
+        cursor: pointer;
+        z-index: 2;
+    }
+    input[id="menuicon"] + label span {
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 5px;
+        border-radius: 50px;
+        background: #000;
+        transform: all .35s;
+    }
+    input[id="menuicon"] + label span:nth-child(1) {
+        top: 0;
+    }
+    input[id="menuicon"] + label span:nth-child(2) {
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    input[id="menuicon"] + label span:nth-child(3) {
+        bottom: 0;
+    }
+    input[id="menuicon"]:checked + label span:nth-child(1) {
+        top: 50%;
+        transform: translateY(-50%) rotate(45deg);
+        background: white;
+    }
+    input[id="menuicon"]:checked + label span:nth-child(2) {
+        opacity: 0;
+    }
+    input[id="menuicon"]:checked + label span:nth-child(3) {
+        bottom: 50%;
+        transform: translateY(50%) rotate(-45deg);
+        background: white;
+    }
+    div[class="sidebar"] {
+        width: 350px;
+        height: 100%;
+        background: #333;
+        position: fixed;
+        top: 0;
+        right: -350px;
+        z-index: 1;
+        transition: all .35s;
+    }
+    input[id="menuicon"]:checked + label + div {
+        right: 0;
+    }
+</style>
+<body>
+    <header class="header">
+        <div class="header_logo">
+            <h1>SWIT CLUB</h1>
+            <p>MAINPAGE</p>
+        </div>
+    </header>
+    <input type="checkbox" id="menuicon">
+    <label for="menuicon">
+        <span></span>
+        <span></span>
+        <span></span>
+    </label>
+    <div class="sidebar">
+        <ul>
+            <li><a href="#">PROGRAMMING</a></li>
+            <li><a href="#">DEEPENING</a></li>
+            <li><a href="#">BULLETIN BOARD</a></li>
+            <li><a href="https://ohu666.github.io/SWITSONG/">MUSIC CHART</a></li>
+        </ul>
+        <div class="underbar">
+            <ul>
+                <li><a href="#">LOGIN</a></li>
+                <li><a href="#">SIGN UP</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
